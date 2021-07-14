@@ -12,3 +12,9 @@ const images = [
     alt: 'Group of Horses Running',
   },
 ];
+
+const galaryItem = ({ url, alt }) => `<li><img src="${url}" alt="${alt}" width = "200px" height = "150px"></li>`;
+const galaryMarkup = images.reduce((acc, item) => acc + galaryItem(item), "");
+const galleryList = document.getElementById("gallery");
+galleryList.insertAdjacentHTML("afterbegin", galaryMarkup);
+galleryList.setAttribute('style', 'list-style: none; display: flex;');

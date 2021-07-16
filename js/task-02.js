@@ -1,25 +1,18 @@
-const ingredients = [
-  'Картошка',
-  'Грибы',
-  'Чеснок',
-  'Помидоры',
-  'Зелень',
-  'Приправы',
-];
-
-
+const ingredients = ['Картошка', 'Грибы', 'Чеснок', 'Помидоры', 'Зелень', 'Приправы'];
 
 const listEl = document.querySelector('#ingredients');
+const listOfingredients = ingredients.map(item => {
+  const itemOfingredients = document.createElement('li');
+  itemOfingredients.textContent = item;
 
-const ingredList = ingredients.reduce((acc, item) => acc + `<li>${item}</li>`, '');
+  return itemOfingredients;
+});
 
-listEl.innerHTML = ingredList;
+listEl.append(...listOfingredients);
 
+// const ingredList = ingredients.reduce((acc, item) => acc + `<li>${item}</li>`, '');
 
-
-
-
-
+// listEl.append(...ingredList);
 
 // const ingredList = document.querySelector('#ingredients');
 // const addIngridients = function (arr) {

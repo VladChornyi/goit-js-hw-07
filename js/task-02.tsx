@@ -1,8 +1,8 @@
-const ingredients = ['Картошка', 'Грибы', 'Чеснок', 'Помидоры', 'Зелень', 'Приправы'];
+const ingredients: string[] = ['Картошка', 'Грибы', 'Чеснок', 'Помидоры', 'Зелень', 'Приправы'];
 
-const listEl = document.querySelector('#ingredients');
-const listOfingredients = ingredients.map(item => {
-  const itemOfingredients = document.createElement('li');
+const listEl: Element = document.querySelector('#ingredients');
+const listOfingredients: HTMLLIElement[] = ingredients.map(item => {
+  const itemOfingredients: HTMLLIElement = document.createElement('li');
   itemOfingredients.textContent = item;
 
   return itemOfingredients;

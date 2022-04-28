@@ -22,12 +22,12 @@
 //   border-color: #f44336;
 // }
 
-const inputNode = document.querySelector('#validation-input');
+const inputNode = <HTMLInputElement>document.querySelector('#validation-input');
 
 const inputValidation = +inputNode.dataset.length;
 
 inputNode.addEventListener('change', e => {
-  if (e.target.value.length === inputValidation) {
+  if ((e.target as HTMLInputElement).value.length === inputValidation) {
     inputNode.classList.add('valid');
     inputNode.classList.remove('invalid');
   } else {

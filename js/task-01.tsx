@@ -6,3 +6,5 @@ allCategories.forEach(item => {
   const quantityItem: number = item.querySelectorAll('li').length;
   console.log(`В категории "${titleText}" количество элементов: ${quantityItem}`);
 });
+
+
